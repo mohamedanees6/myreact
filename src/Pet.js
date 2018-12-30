@@ -1,14 +1,18 @@
-export const Pet = props => {
-  // return React.createElement("div", {}, [
-  //   React.createElement("h1", {}, props.name),
-  //   React.createElement("h2", {}, props.breed)
-  // ]);
+import React from "react";
 
-  return (
-    <div>
-    <h1>Name is : {props.name}</h1>
-    <h2>Breed is : {props.name}</h2>
-    </div>
-  )
-};
-// export default Pet;
+class Pet extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Name is : {this.props.name}</h1>
+        <h2>Breed is : {this.props.breed}</h2>
+      </div>
+    );
+  }
+}
+
+export default Pet;
